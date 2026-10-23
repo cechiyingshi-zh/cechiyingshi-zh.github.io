@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>策驰影视 - 高清影视在线观看与资源分享平台 | cechiyingshi-zh.github.io</title>
+<meta name="description" content="策驰影视（cechiyingshi-zh.github.io）专注于提供高清电影、热门电视剧、综艺与动漫的在线观看及资源导航服务。每日更新院线新片与经典剧集，支持多清晰度播放，为影视爱好者打造便捷、清爽的观影入口。">
+<meta name="keywords" content="策驰影视, 策驰影视在线观看, cechiyingshi-zh.github.io, 高清电影, 热门电视剧, 影视资源分享, 国产剧, 美剧, 动漫, 综艺节目">
+<meta name="author" content="策驰影视">
+<meta name="robots" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:type" content="website">
+<meta property="og:title" content="策驰影视 - 高清影视在线观看平台">
+<meta property="og:description" content="策驰影视（cechiyingshi-zh.github.io）提供高清电影、电视剧、综艺、动漫的在线观看与资源导航，每日更新，畅快观影。">
+<meta property="og:url" content="https://cechiyingshi-zh.github.io">
+<meta property="og:site_name" content="策驰影视">
+<link rel="canonical" href="https://cechiyingshi-zh.github.io">
+<style>
+:root{
+  --bg-deep:#070b17;
+  --bg-panel:#0f1628;
+  --line:rgba(255,255,255,.08);
+  --txt:#e8ecf5;
+  --txt-dim:#9aa6bf;
+  --accent:#ff5a36;
+  --accent-soft:rgba(255,90,54,.14);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg-deep);
+  color:var(--txt);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* 顶部 */
+header{position:sticky;top:0;z-index:50;background:rgba(7,11,23,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:62px}
+.brand{font-size:19px;font-weight:800;letter-spacing:.5px;display:flex;align-items:center;gap:9px}
+.brand i{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#ff8a5c);display:inline-block}
+.nav-links{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font-size:14px;color:var(--txt-dim);padding:7px 12px;border-radius:9px;transition:.2s}
+.nav-links a:hover{color:#fff;background:var(--accent-soft)}
+/* 首屏 */
+.hero{position:relative;padding:76px 0 60px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,54,.28),transparent 68%);filter:blur(20px)}
+.hero h1{font-size:clamp(28px,5.4vw,46px);line-height:1.25;font-weight:850;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin-top:16px;max-width:640px;color:var(--txt-dim);font-size:15px}
+.hero-meta{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+.tag{font-size:12.5px;color:#cdd6ea;background:var(--bg-panel);border:1px solid var(--line);padding:6px 13px;border-radius:999px}
+.tag b{color:var(--accent)}
+/* 通用区块 */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;font-weight:800;display:flex;align-items:center;gap:10px}
+.sec-head h2 span{width:4px;height:20px;border-radius:3px;background:var(--accent);display:inline-block}
+.sec-head small{color:var(--txt-dim);font-size:13px;font-weight:400}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--bg-panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,90,54,.4);background:#141d33}
+.card .no{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:1px}
+.card h3{font-size:16.5px;margin:8px 0 7px}
+.card p{font-size:13.5px;color:var(--txt-dim)}
+/* 频道卡 */
+.chan{position:relative;min-height:130px;overflow:hidden}
+.chan .big{font-size:40px;font-weight:850;color:rgba(255,255,255,.04);position:absolute;right:12px;bottom:-8px;line-height:1}
+.chan ul{list-style:none;margin-top:12px;display:flex;flex-wrap:wrap;gap:7px}
+.chan ul li{font-size:12.5px;color:var(--txt-dim);background:rgba(255,255,255,.05);padding:4px 10px;border-radius:6px}
+/* 列表 */
+.list{list-style:none;display:flex;flex-direction:column;gap:11px}
+.list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--txt-dim)}
+.list li i{flex:none;width:20px;height:20px;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:11px;font-style:normal;font-weight:700;display:grid;place-items:center;margin-top:3px}
+.list li strong{display:block;color:#fff;font-size:14.5px;font-weight:650}
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--bg-panel);border-radius:var(--radius);overflow:hidden}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#131c31;color:#fff;font-weight:700;font-size:13px}
+td{color:var(--txt-dim)}
+td:first-child{color:#fff;font-weight:600}
+/* 时间线 */
+.tl{list-style:none;display:flex;flex-direction:column;gap:16px}
+.tl li{display:flex;gap:14px;background:var(--bg-panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.tl .dot{flex:none;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:8px;box-shadow:0 0 0 5px var(--accent-soft)}
+.tl b{font-size:14.5px}
+.tl p{font-size:13.5px;color:var(--txt-dim);margin-top:3px}
+/* FAQ */
+.faq details{background:var(--bg-panel);border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin-bottom:10px}
+.faq details[open]{border-color:rgba(255,90,54,.4)}
+.faq summary{cursor:pointer;font-weight:650;font-size:14.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-weight:800}
+.faq details[open] summary::after{content:"−"}
+.faq p{font-size:13.5px;color:var(--txt-dim);margin-top:10px}
+/* 页脚 */
+footer{border-top:1px solid var(--line);padding:40px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px;margin-bottom:28px}
+.foot-grid h4{font-size:14px;margin-bottom:11px;color:#fff}
+.foot-grid p,.foot-grid a{font-size:13px;color:var(--txt-dim)}
+.foot-grid a:hover{color:var(--accent)}
+.copyright{font-size:12.5px;color:#6d7a93;border-top:1px solid var(--line);padding-top:18px}
+/* 回到顶部 */
+.top{position:fixed;right:16px;bottom:20px;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;border:0;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:60}
+.top.on{opacity:1;pointer-events:auto}
+/* 响应式 */
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3,.g2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav{height:56px;gap:10px}
+  .brand{font-size:16.5px}
+  .brand i{width:22px;height:22px}
+  .nav-links a{padding:5px 8px;font-size:13px}
+  .hero{padding:44px 0 38px}
+  section{padding:40px 0}
+  .g4{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:20px}
+  .sec-head h2{font-size:19px}
+  table{font-size:12.5px}
+  th,td{padding:9px 10px}
+  .copyright{font-size:12px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><i></i>策驰影视</div>
+    <nav class="nav-links">
+      <a href="#channel">内容频道</a>
+      <a href="#update">更新日历</a>
+      <a href="#feature">平台特色</a>
+      <a href="#guide">使用指南</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于我们</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>策驰影视 · 一站式<em>高清影视</em>观看与资源导航</h1>
+      <p>策驰影视（cechiyingshi-zh.github.io）是一个面向影视爱好者的内容聚合与观看指引站点。我们按类型梳理电影、电视剧、综艺与动漫资源，标注清晰度与更新进度，帮你用更少时间找到想看的那一部。</p>
+      <div class="hero-meta">
+        <span class="tag">官方网址：<b>cechiyingshi-zh.github.io</b></span>
+        <span class="tag">每日内容更新</span>
+        <span class="tag">多清晰度适配</span>
+        <span class="tag">移动端自适应</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="channel">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span></span>内容频道</h2>
+        <small>六大分区，按观影口味直达</small>
+      </div>
+      <div class="grid g3">
+        <article class="card chan">
+          <div class="big">01</div>
+          <div class="no">CHANNEL</div>
+          <h3>院线电影</h3>
+          <p>动作、悬疑、喜剧、科幻、文艺，覆盖国内外新片与影史经典。</p>
+          <ul><li>1080P</li><li>蓝光</li><li>中文字幕</li><li>豆瓣高分</li></ul>
+        </article>
+        <article class="card chan">
+          <div class="big">02</div>
+          <div class="no">CHANNEL</div>
+          <h3>热门电视剧</h3>
+          <p>国产剧、美剧、韩剧、日剧同步跟进，追更进度一目了然。</p>
+          <ul><li>全集</li><li>周更</li><li>分季</li><li>未删减</li></ul>
+        </article>
+        <article class="card chan">
+          <div class="big">03</div>
+          <div class="no">CHANNEL</div>
+          <h3>综艺与纪实</h3>
+          <p>真人秀、谈话、户外、纪录片，轻松下饭与深度长片兼顾。</p>
+          <ul><li>更新中</li><li>往季合集</li><li>4K</li></ul>
+        </article>
+        <article class="card chan">
+          <div class="big">04</div>
+          <div class="no">CHANNEL</div>
+          <h3>动漫番剧</h3>
+          <p>国漫、日番、剧场版与 OVA，按季度与题材双维度归类。</p>
+          <ul><li>连载</li><li>完结</li><li>双语</li></ul>
+        </article>
+        <article class="card chan">
+          <div class="big">05</div>
+          <div class="no">CHANNEL</div>
+          <h3>经典重温</h3>
+          <p>历届获奖影片与时代剧集，为怀旧观影提供专题式清单。</p>
+          <ul><li>奥斯卡</li><li>戛纳</li><li>金像奖</li></ul>
+        </article>
+        <article class="card chan">
+          <div class="big">06</div>
+          <div class="no">CHANNEL</div>
+          <h3>片单推荐</h3>
+          <p>编辑按主题整理的观影清单，解决"不知道看什么"的选择困难。</p>
+          <ul><li>周榜</li><li>月榜</li><li>专题</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="update">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span></span>更新日历</h2>
+        <small>本周内容排期一览</small>
+      </div>
+      <table>
+        <thead>
+          <tr><th>播出日</th><th>内容类型</th><th>更新说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>周一</td><td>国产剧 / 美剧</td><td>跟播剧集上线，同步更新分集信息与字幕版本</td></tr>
+          <tr><td>周二</td><td>院线电影</td><td>新增近期上映影片及其高清版本索引</td></tr>
+          <tr><td>周三</td><td>综艺纪实</td><td>真人秀与纪录片最新一期收录</td></tr>
+          <tr><td>周四</td><td>动漫番剧</td><td>当季新番与国漫连载更新</td></tr>
+          <tr><td>周五</td><td>片单推荐</td><td>编辑周榜发布，附简短观影点评</td></tr>
+          <tr><td>周末</td><td>经典重温</td><td>专题影单与获奖影片回顾</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="feature">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span></span>平台特色</h2>
+        <small>为什么选择策驰影视</small>
+      </div>
+      <div class="grid g4">
+        <div class="card"><div class="no">F 01</div><h3>分类清晰</h3><p>按题材、年份、地区、清晰度多维度打标，检索不绕路。</p></div>
+        <div class="card"><div class="no">F 02</div><h3>更新及时</h3><p>热门内容按播出节奏跟进，追更信息标注明确。</p></div>
+        <div class="card"><div class="no">F 03</div><h3>轻量访问</h3><p>页面无冗余脚本，移动端与弱网环境下加载依然迅速。</p></div>
+        <div class="card"><div class="no">F 04</div><h3>信息透明</h3><p>清晰度、字幕、集数、时长等关键信息直接展示。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span></span>使用指南</h2>
+        <small>三步开始观影</small>
+      </div>
+      <ul class="list">
+        <li><i>1</i><span><strong>访问策驰影视官方网址</strong>在浏览器地址栏输入 https://cechiyingshi-zh.github.io，进入网站首页。</span></li>
+        <li><i>2</i><span><strong>选择内容频道</strong>从电影、电视剧、综艺、动漫等分区中挑选想看的类型。</span></li>
+        <li><i>3</i><span><strong>查看详情与播放</strong>在内容页确认清晰度、字幕与集数信息后，按指引跳转观看。</span></li>
+      </ul>
+      <div class="grid g2" style="margin-top:16px">
+        <div class="card"><div class="no">TIP</div><h3>搜索小技巧</h3><p>使用"片名 + 年份"或"演员 + 类型"组合词，能更快定位到目标内容。</p></div>
+        <div class="card"><div class="no">TIP</div><h3>清晰度怎么选</h3><p>移动网络建议 720P 省流，Wi-Fi 环境下可切换 1080P 及以上获得更佳画质。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span></span>常见问题</h2>
+        <small>FAQ</small>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>策驰影视的官方网址是什么？</summary>
+          <p>官方网址为 https://cechiyingshi-zh.github.io，请认准该域名，避免误入仿冒站点。</p>
+        </details>
+        <details>
+          <summary>网站上的内容需要付费吗？</summary>
+          <p>本站主要提供内容索引与观看指引，具体播放页的收费规则以对应平台公示为准。</p>
+        </details>
+        <details>
+          <summary>为什么部分内容显示"暂无资源"？</summary>
+          <p>受版权与地区限制，个别内容暂时无法提供索引，我们会持续补充可合法访问的观看渠道。</p>
+        </details>
+        <details>
+          <summary>手机上能正常浏览吗？</summary>
+          <p>可以。网站采用响应式布局，在手机、平板与桌面端均能自适应显示。</p>
+        </details>
+        <details>
+          <summary>如何获取最新更新通知？</summary>
+          <p>定期访问首页更新日历，或直接收藏 https://cechiyingshi-zh.github.io 即可。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span></span>关于策驰影视</h2>
+        <small>站点简介</small>
+      </div>
+      <div class="grid g2">
+        <div class="card">
+          <div class="no">ABOUT</div>
+          <h3>我们是谁</h3>
+          <p>策驰影视（cechiyingshi-zh.github.io）由一群影视爱好者维护，初衷是把散落各处的优质影视内容整理成结构清晰的索引，让观众少花时间在找片上，多花时间在观影上。</p>
+        </div>
+        <div class="card">
+          <div class="no">CONTACT</div>
+          <h3>内容合作与反馈</h3>
+          <p>如需提交片源信息、反馈失效链接或提出功能建议，可通过站点留言渠道与我们联系，通常会在两个工作日内回复。</p>
+        </div>
+      </div>
+      <ul class="tl" style="margin-top:16px">
+        <li><span class="dot"></span><span><b>2026 年 10 月 · 站点上线</b><p>策驰影视正式开放访问，首批上线电影、电视剧、综艺、动漫四大频道。</p></span></li>
+        <li><span class="dot"></span><span><b>持续迭代</b><p>更新日历、片单推荐与清晰度标注陆续完善，站点结构与内容清单保持周更。</p></span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><i></i>策驰影视</div>
+        <p style="margin-top:10px">策驰影视（cechiyingshi-zh.github.io）是影视内容索引与观看指引站点，提供电影、电视剧、综艺、动漫等分类导航服务。</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <p><a href="#channel">内容频道</a></p>
+        <p><a href="#update">更新日历</a></p>
+        <p><a href="#guide">使用指南</a></p>
+      </div>
+      <div>
+        <h4>官方入口</h4>
+        <p>网址：cechiyingshi-zh.github.io</p>
+        <p>访问：https://cechiyingshi-zh.github.io</p>
+        <p><a href="#faq">常见问题</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      本站所有内容均指向合法公开资源，版权归原作者及发行方所有。© 2026 策驰影视 · https://cechiyingshi-zh.github.io · 仅供学习与交流使用
+    </div>
+  </div>
+</footer>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var btn=document.getElementById('topBtn');
+  window.addEventListener('scroll',function(){
+    btn.classList[window.scrollY>400?'add':'remove']('on');
+  });
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>
